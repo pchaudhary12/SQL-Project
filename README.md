@@ -4,7 +4,29 @@
 (fill in your description and goals here)
 
 ## Process
-### (your step 1)
+### Part 1 -  Create Database and Importing data
+// Working with postgreSQL
+// Creating Tables
+// General Syntax for creating Table and Importing Data
+```SQL
+   create Table table_name
+   (
+    column_name  data_type,
+    column_name2 data_type,
+    .
+    .,
+    primary key (column_name)
+
+   )
+   ```
+   // General syntax for Copying CSV file
+  ```SQL
+   copy file_name
+   from 'file destination'
+   delimeter ',' // mentioning delimiter
+   CSV header // mentioning that CSV file have header
+   ```
+  
 ### (your step 2)
 
 ## Results
