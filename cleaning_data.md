@@ -154,3 +154,53 @@ set v2productcategory = case when v2productcategory in ('${escCatTitle}','(not s
 	                    else v2productcategory
 	               end
 ```
+
+### Cleaning Analytics Table
+```SQL
+-- Drop empty column
+alter table analytics
+drop column userid
+```
+
+```SQL
+-- Change Datatype for unit_price 
+alter table analytics
+alter column unit_price type float using unit_price::float
+```
+
+```SQL
+-- Change Datatype for revenue 
+alter table analytics
+alter column revenue type bigint using revenue::bigint
+```
+
+```SQL
+-- Change Datatype for bounces
+alter table analytics
+alter column bounces type int using bounces::int
+```
+```SQL
+-- Change Datatype for pageviews
+alter table analytics
+alter column pageviews type int using pageviews::int
+```
+```SQL
+-- Change Datatype for units_sold
+alter table analytics
+alter column units_sold type int using units_sold::int
+```
+```SQL
+-- Change Datatype for date 
+alter table analytics
+alter column date type date using date::date
+```
+```SQL
+-- Change Datatype for visitid
+alter table analytics
+alter column visitid type int using visitid::integer
+```
+```SQL
+-- Change Datatype for visitnumber 
+alter table analytics
+alter column visitnumber type int using visitnumber::integer
+```
