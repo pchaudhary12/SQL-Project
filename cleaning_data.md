@@ -233,7 +233,7 @@ alter table products
 alter column orderedquantity type int using orderedquantity::int
 ```
 
-### Changing Dattype and assigning pk for sales_by_sku
+### Changing Datatype and assigning pk for sales_by_sku
 ```SQL
 --Assigning PK to sales_by_sku
 alter table sales_by_sku
