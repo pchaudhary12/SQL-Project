@@ -124,3 +124,33 @@ drop column searchkeyword
 alter table all_sessions
 drop column itemrevenue
 ```
+```SQL
+-- Droping Empty itemquantity column
+alter table all_sessions
+drop column itemquantity 
+```
+
+##Replacing NUll values 
+
+```SQL
+-- Updating currencycode column
+update all_sessions
+set currencycode = case when currencycode is null then 'N/A'
+	                    else currencycode
+	               end
+```
+
+```SQL
+-- Updating productvariant column 
+update all_sessions
+set productvariant = case when productvariant = '(not set)' then 'N/A'
+	                    else productvariant
+	               end
+```
+```SQL
+-- Updating v2categorycolumn 
+update all_sessions
+set v2productcategory = case when v2productcategory in ('${escCatTitle}','(not set)') then 'N/A'
+	                    else v2productcategory
+	               end
+```
