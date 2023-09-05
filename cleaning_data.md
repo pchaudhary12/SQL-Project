@@ -204,3 +204,31 @@ alter column visitid type int using visitid::integer
 alter table analytics
 alter column visitnumber type int using visitnumber::integer
 ```
+
+### Cleaning Products Table
+
+```SQL
+-- Change Datatype of sentimentmagnitude
+alter table products
+alter column sentimentmagnitude type float using sentimentmagnitude::float
+```
+```SQL
+-- Change Datatype of senitmentscore
+alter table products
+alter column sentimentscore type float using sentimentscore::float
+```
+```SQL
+-- Change Datatype of restockingleadtime 
+alter table products
+alter column restockingleadtime type int using restockingleadtime::int
+```
+```SQL
+-- Change Datatype of stocklevel
+alter table products
+alter column stocklevel type int using stocklevel::int
+```
+```SQL
+-- Change Datatype of orderedquantity 
+alter table products
+alter column orderedquantity type int using orderedquantity::int
+```
