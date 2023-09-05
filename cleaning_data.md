@@ -95,6 +95,14 @@ alter column transactions type int using transactions::integer
 alter table all_sessions
 alter column   totaltransactionrevenue type float  using totaltransactionrevenue::double precision
 ``` 
+//Replacing Country names where country value is not availble
+```SQL
+select *,
+       case when country = '(not set)' then  'N/A'
+	   else country
+	   end
+from all_sessions
+```
 
 // Replacing city names with country where value is not city 
 ```SQL
@@ -105,4 +113,14 @@ set city = case when city = 'not available in demo dataset' then country
 	       end
 	  select *
 	  from all_sessions
+```
+
+## Droping Empty Columns from All_sessions
+```SQL
+alter table all_sessions
+drop column searchkeyword
+```
+```SQL
+alter table all_sessions
+drop column itemrevenue
 ```
