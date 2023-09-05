@@ -232,3 +232,15 @@ alter column stocklevel type int using stocklevel::int
 alter table products
 alter column orderedquantity type int using orderedquantity::int
 ```
+
+### Changing Dattype and assigning pk for sales_by_sku
+```SQL
+--Assigning PK to sales_by_sku
+alter table sales_by_sku
+add primary key (productsku)
+```
+```SQL
+-- Changing datatype of total_ordered
+alter table sales_by_sku
+alter column total_ordered type int using total_ordered::int
+```
