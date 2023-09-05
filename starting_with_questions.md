@@ -5,7 +5,14 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries:
-
+```SQL 
+--The average number of products ordered from visitors in each city and country
+select country, city ,
+        avg(productquantity) as avg_product_ordered
+from all_sessions
+group by country, city 
+order by country, city
+```
 
 
 Answer:
