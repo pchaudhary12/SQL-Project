@@ -50,6 +50,44 @@ Answer:
 
 SQL Queries:
 
+```SQL  
+
+create temp table overall_cate as
+(    -- Product categories of products ordered from visitors in each city and country
+   select  country, city, p.name as productname, v2productcategory,
+           sum(orderedquantity) as total_products
+	  
+   from all_sessions s
+   join products p on s.productsku = p.sku
+   group by country,city,p.name, v2productcategory
+   having sum(orderedquantity) <> 0
+   order by country, city, total_products desc
+)
+```
+// Finding pattern in the query
+```SQL
+( -- finding top 3 orders with highest volume ordered in each city and country 
+        select country, city, v2productcategory, max(total_products) as order,
+                'Most Popular' as type 
+       from overall_cate
+group by country, city, v2productcategory
+order by max(total_products) desc
+limit 3
+)
+
+union all -- Unioning columns from both the results that shows top 3 most and least popular orders placed by volume in each city and country
+
+	
+( -- finding top 3 orders with lowest volume ordered in each city and country 
+        select  country, city, v2productcategory, 
+                min(total_products) as order,
+               'Least Popular' as type
+        from overall_cate
+group by country, city, v2productcategory
+order by min(total_products) desc
+limit 3
+)
+```
 
 
 Answer:
