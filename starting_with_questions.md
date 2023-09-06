@@ -42,7 +42,7 @@ order by country, city
 
 Answer:
 
-![Alt text](image.png)
+![Alt text](<Screenshot 2023-09-06 012207.png>)
 
 
 
