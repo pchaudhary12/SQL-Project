@@ -41,7 +41,7 @@ order by country, city
 
 Answer:
 
-
+![Alt text](image.png)
 
 
 
@@ -91,10 +91,21 @@ limit 3
 
 
 Answer:
+## Product categories of products ordered from visitors in each city and country
 
+![Alt text](image.png)
 
+## finding top 3 orders with highest volume ordered in each city and country 
 
+![Alt text](image.png)
 
+## finding top 3 orders with lowest volume ordered in each city and country 
+
+![Alt text](image.png)
+
+## Unioning columns from both the results that shows top 3 most and least popular orders placed by volume in each city and country
+
+![Alt text](image.png)
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
