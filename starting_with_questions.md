@@ -108,6 +108,7 @@ Answer:
 
 ![Alt text](<Screenshot 2023-09-06 013205.png>)
 
+
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
@@ -131,7 +132,7 @@ where rank = 1
 
 Answer:
 
-
+![Alt text](<Screenshot 2023-09-06 014330.png>)
 
 
 
@@ -148,6 +149,7 @@ having sum(totaltransactionrevenue) <> 0
 
 Answer:
 
+![Alt text](<Screenshot 2023-09-06 014449.png>)
 
 
 
