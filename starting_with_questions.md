@@ -22,7 +22,7 @@ where rank = 1
 
 Answer:
 
-
+![Alt text](image.png)
 
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
@@ -126,8 +126,13 @@ Answer:
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
-
-
+```SQL
+select country, city,
+       sum(totaltransactionrevenue) as revenue
+from all_sessions 
+group by country, city
+having sum(totaltransactionrevenue) <> 0
+```
 
 Answer:
 
