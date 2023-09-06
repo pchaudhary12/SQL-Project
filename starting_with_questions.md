@@ -35,6 +35,7 @@ select country, city ,
         avg(productquantity) as avg_product_ordered
 from all_sessions
 group by country, city 
+having avg(productquantity) <> 0
 order by country, city
 ```
 
