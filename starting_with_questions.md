@@ -62,8 +62,22 @@ Answer:
 
 
 SQL Queries:
-
-
+```SQL
+ with sale_by_country as     -- Creating CTE with total products sold in each city from each country with products name
+(
+        select country, city, p.name as productname,
+               sum(orderedquantity) as total_products, 
+	       rank() over(partition by country,city order by sum(orderedquantity) desc) as rank -- Ranking the grouped products sold in each country and city 
+from all_sessions s
+join products p on s.productsku = p.sku
+group by country,city,p.name
+order by country, city
+) 
+-- selecting highest selling productnames from each city within each country 
+select country, city, productname
+from sale_by_country
+where rank = 1 
+```
 
 Answer:
 
