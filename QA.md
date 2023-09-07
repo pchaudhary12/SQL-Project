@@ -1,4 +1,5 @@
 What are your risk areas? Identify and describe them.
+
 (1) Duplicate Records:
                        Duplicate Records may take up more space, also could be a factor for inaccurate values.
 
