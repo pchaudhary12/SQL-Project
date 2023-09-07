@@ -3,8 +3,11 @@
 ## Project/Goals
 
 (1) Importing eCommerece Database data to postgresql
+
 (2) Cleaning and transforming data for analytics
+
 (3) Study patterns and finding relations across different tables
+
 (4) Running queries to get business analtyics  
 
 ## Process
