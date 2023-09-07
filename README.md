@@ -217,9 +217,7 @@ from (   -- Creating subquery with totaltransaction revenue by each city within 
         group by country, city
 	 ) as sub
 where rank = 1
-Answer:
 
-Alt text
 
 Question 2: What is the average number of products ordered from visitors in each city and country?
 
@@ -232,9 +230,7 @@ from all_sessions
 group by country, city 
 having avg(productquantity) <> 0
 order by country, city
-Answer:
 
-Alt text
 
 Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?
 
@@ -274,19 +270,7 @@ group by country, city, v2productcategory
 order by min(total_products) desc
 limit 3
 )
-Answer:
 
-Product categories of products ordered from visitors in each city and country
-Alt text
-
-finding top 3 orders with highest volume ordered in each city and country
-Alt text
-
-finding top 3 orders with lowest volume ordered in each city and country
-Alt text
-
-Unioning columns from both the results that shows top 3 most and least popular orders placed by volume in each city and country
-Alt text
 
 Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
 
@@ -306,9 +290,7 @@ order by country, city
 select country, city, productname
 from sale_by_country
 where rank = 1 
-Answer:
 
-Alt text
 
 Question 5: Can we summarize the impact of revenue generated from each city/country?
 
@@ -319,9 +301,6 @@ select country, city,
 from all_sessions 
 group by country, city
 having sum(totaltransactionrevenue) <> 0
-Answer:
-
-Alt text
 ```
 
 
